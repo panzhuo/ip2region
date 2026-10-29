@@ -95,9 +95,9 @@ java -jar target/ip2region-3.3.7.jar search
 
 日志：[04-bench-v4.log](./04-bench-v4.log)
 
-## 7. 已知问题（非阻塞）
+## 7. 已知问题
 
-1. `data/sample/ip.test.txt` 为旧版中文 region 格式，与当前英文 xdb 不匹配，用它跑 bench 会报 `failed search(1.0.0.0)`。属上游样例文件滞后，非代码缺陷；改用 `data/ipv4_source.txt` 通过。
+1. ~~`data/sample/ip.test.txt` 为旧版中文 region 格式，与当前英文 xdb 不匹配，用它跑 bench 会报 `failed search(1.0.0.0)`。~~ **已修复**：该文件是 6 字段旧格式（缺国家代码），且分段与当前数据不一致（25 行中仅 21 个起点可对应、1 处结束 IP 不同）。已按正式源数据 `data/ipv4_source.txt` 重建同一 IP 跨度（1.0.0.0–1.0.175.255）的 21 行样例，现代码 bench 通过（42 次查询零误差，日志见 [05-bench-sample.log](./05-bench-sample.log)）。
 2. 使用稀疏检出时，`sparse-checkout add` 会移除未纳入规则的已跟踪文件（xdb），需重新放置并复核哈希。
 
 ## 8. 复现命令
