@@ -1,0 +1,6 @@
+=== cache-policy: file ===
+Bench finished, {cachePolicy: file, total: 1033720, took: 8s, cost: 7 μs/op}
+=== cache-policy: vectorIndex ===
+Bench finished, {cachePolicy: vectorIndex, total: 1033720, took: 6s, cost: 6 μs/op}
+=== cache-policy: content ===
+Bench finished, {cachePolicy: content, total: 1033720, took: 0s, cost: 0 μs/op}

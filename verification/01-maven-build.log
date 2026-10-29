@@ -1,0 +1,565 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< org.lionsoul:ip2region >-----------------------
+[INFO] Building ip2region 3.3.7
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ ip2region ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ ip2region ---
+[INFO] skip non existing resourceDirectory /Users/panzhuo/Documents/openclaw/ip2region/binding/java/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.16.0:compile (default-compile) @ ip2region ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 17 source files with javac [debug release 8] to target/classes
+[WARNING] 源值 8 已过时，将在未来发行版中删除
+[WARNING] 目标值 8 已过时，将在未来发行版中删除
+[WARNING] 要隐藏有关已过时选项的警告, 请使用 -Xlint:-options。
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ ip2region ---
+[INFO] skip non existing resourceDirectory /Users/panzhuo/Documents/openclaw/ip2region/binding/java/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.16.0:testCompile (default-testCompile) @ ip2region ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 8 source files with javac [debug release 8] to target/test-classes
+[WARNING] 源值 8 已过时，将在未来发行版中删除
+[WARNING] 目标值 8 已过时，将在未来发行版中删除
+[WARNING] 要隐藏有关已过时选项的警告, 请使用 -Xlint:-options。
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ ip2region ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.lionsoul.ip2region.xdb.UtilTest
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.UtilTest ipSubCompare(1.0.0.0, 1.0.0.1): -1
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.UtilTest ipSubCompare(192.168.1.100, 192.168.2.100): -1
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.UtilTest ipSubCompare(10.100.1.10, 11.100.2.10): -1
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.UtilTest ipSubCompare(11.100.1.10, 10.100.2.10): 1
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.UtilTest compare(1.0.0.0, 1.0.0.1): -1
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.UtilTest compare(192.168.1.101, 192.168.1.90): 1
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.UtilTest compare(219.133.111.87, 114.114.114.114): 1
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.UtilTest compare(2000::, 2000:ffff:ffff:ffff:ffff:ffff:ffff:ffff): -1
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.UtilTest compare(2001:4:112::, 2001:4:112:ffff:ffff:ffff:ffff:ffff): -1
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.UtilTest compare(ffff::, 2001:4:ffff:ffff:ffff:ffff:ffff:ffff): 1
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.UtilTest 192.168.1.102(v=[192,168,1,102]) => 192.168.1.102
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.UtilTest 219.133.111.87(v=[219,133,111,87]) => 219.133.111.87
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.UtilTest ::(v=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]) => 0:0:0:0:0:0:0:0
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.UtilTest 3000::(v=[48,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]) => 3000:0:0:0:0:0:0:0
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.UtilTest ::1001:ffff(v=[0,0,0,0,0,0,0,0,0,0,0,0,16,1,255,255]) => 0:0:0:0:0:0:1001:ffff
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.UtilTest 2001:2:0:ffff:ffff:ffff:ffff:ffff(v=[32,1,0,2,0,0,255,255,255,255,255,255,255,255,255,255]) => 2001:2:0:ffff:ffff:ffff:ffff:ffff
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.UtilTest ::ffff:114.114.114.114(v=[114,114,114,114]) => 114.114.114.114
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.055 s -- in org.lionsoul.ip2region.xdb.UtilTest
+[INFO] Running org.lionsoul.ip2region.xdb.LittleEndianTest
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.LittleEndianTest uint32(buff, 0): 1
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.LittleEndianTest uint32(buff, 4): 2
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.LittleEndianTest int2(buff, 8): 24
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.LittleEndianTest uint32(buff, 10): 1024
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s -- in org.lionsoul.ip2region.xdb.LittleEndianTest
+[INFO] Running org.lionsoul.ip2region.xdb.IPv4Test
+2026-10-29 13:47:37 INFO  org.lionsoul.ip2region.xdb.IPv4Test bytesToString(buff): [255,255,255,0,2,0,0,1]
+2026-10-29 13:47:37 INFO  org.lionsoul.ip2region.xdb.IPv4Test ipSubCompare(1.0.0.0, [255,255,255,0]): -1
+2026-10-29 13:47:37 INFO  org.lionsoul.ip2region.xdb.IPv4Test IPv4.ipSubCompare(1.0.0.0, [255,255,255,0]): 1
+2026-10-29 13:47:37 INFO  org.lionsoul.ip2region.xdb.IPv4Test ipSubCompare(1.0.0.0, [2,0,0,1]): -1
+2026-10-29 13:47:37 INFO  org.lionsoul.ip2region.xdb.IPv4Test IPv4.ipSubCompare(1.0.0.0, [2,0,0,1]): -1
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.lionsoul.ip2region.xdb.IPv4Test
+[INFO] Running org.lionsoul.ip2region.xdb.BufferTest
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.VersionTest cBuffer->{length:37277813, size:8}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.VersionTest Header->{Version:3,IndexPolicy:1,CreatedAt:1786685921,StartIndexPtr:9349599,EndIndexPtr:37277775,IPVersion:6,RuntimePtrBytes:4}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.VersionTest failed to append: buffer array closed (EOF=true)
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.VersionTest m2Buffer[       0:4]:      65539, m5Buffer[       0:4]:      65539, equals ? true
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.VersionTest m2Buffer[      10:4]: 3087794227, m5Buffer[      10:4]: 3087794227, equals ? true
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.VersionTest m2Buffer[     512:4]:    3367596, m5Buffer[     512:4]:    3367596, equals ? true
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.VersionTest m2Buffer[    1024:4]:    3368492, m5Buffer[    1024:4]:    3368492, equals ? true
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.VersionTest m2Buffer[   39672:4]:    3785244, m5Buffer[   39672:4]:    3785244, equals ? true
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.VersionTest m2Buffer[ 2097152:4]: 1917811826, m5Buffer[ 2097152:4]: 1917811826, equals ? true
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.VersionTest cBuffer->{length:37277813, size:1}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.VersionTest cBuffer->{length:11122714, size:1}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.VersionTest cBuffer->{length:11122714, size:6}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.VersionTest Header->{Version:3,IndexPolicy:1,CreatedAt:1793161301,StartIndexPtr:3367148,EndIndexPtr:11122700,IPVersion:4,RuntimePtrBytes:4}
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.052 s -- in org.lionsoul.ip2region.xdb.BufferTest
+[INFO] Running org.lionsoul.ip2region.xdb.VersionTest
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.VersionTest v4: {Id:4, Name:IPv4, Bytes:4, IndexSize: 14}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.VersionTest v6: {Id:6, Name:IPv6, Bytes:16, IndexSize: 38}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.VersionTest ver1: {Id:4, Name:IPv4, Bytes:4, IndexSize: 14}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.xdb.VersionTest ver2: {Id:6, Name:IPv6, Bytes:16, IndexSize: 38}
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.lionsoul.ip2region.xdb.VersionTest
+[INFO] Running org.lionsoul.ip2region.service.SearcherPoolTest
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 0: org.lionsoul.ip2region.xdb.Searcher@536aaa8d->{version:IPv6, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v6.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 0
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 1: org.lionsoul.ip2region.xdb.Searcher@704a52ec->{version:IPv6, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v6.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 1
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 2: org.lionsoul.ip2region.xdb.Searcher@6ee52dcd->{version:IPv6, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v6.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 2
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 3: org.lionsoul.ip2region.xdb.Searcher@4493d195->{version:IPv6, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v6.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 3
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 4: org.lionsoul.ip2region.xdb.Searcher@2781e022->{version:IPv6, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v6.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 4
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 5: org.lionsoul.ip2region.xdb.Searcher@536aaa8d->{version:IPv6, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v6.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 5
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 6: org.lionsoul.ip2region.xdb.Searcher@704a52ec->{version:IPv6, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v6.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 6
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 7: org.lionsoul.ip2region.xdb.Searcher@6ee52dcd->{version:IPv6, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v6.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 7
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 8: org.lionsoul.ip2region.xdb.Searcher@4493d195->{version:IPv6, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v6.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 8
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 9: org.lionsoul.ip2region.xdb.Searcher@2781e022->{version:IPv6, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v6.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 9
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 10: org.lionsoul.ip2region.xdb.Searcher@536aaa8d->{version:IPv6, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v6.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 10
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 11: org.lionsoul.ip2region.xdb.Searcher@704a52ec->{version:IPv6, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v6.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 11
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 12: org.lionsoul.ip2region.xdb.Searcher@6ee52dcd->{version:IPv6, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v6.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 12
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 13: org.lionsoul.ip2region.xdb.Searcher@4493d195->{version:IPv6, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v6.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 13
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 14: org.lionsoul.ip2region.xdb.Searcher@2781e022->{version:IPv6, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v6.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 14
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 15: org.lionsoul.ip2region.xdb.Searcher@536aaa8d->{version:IPv6, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v6.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 15
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 16: org.lionsoul.ip2region.xdb.Searcher@704a52ec->{version:IPv6, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v6.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 16
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 17: org.lionsoul.ip2region.xdb.Searcher@6ee52dcd->{version:IPv6, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v6.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 17
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 18: org.lionsoul.ip2region.xdb.Searcher@4493d195->{version:IPv6, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v6.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 18
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 19: org.lionsoul.ip2region.xdb.Searcher@2781e022->{version:IPv6, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v6.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 19
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest v6 searcher pool closed gracefully
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 0: org.lionsoul.ip2region.xdb.Searcher@4232c52b->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:null, cBuffer:11122714}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 0
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 1: org.lionsoul.ip2region.xdb.Searcher@1877ab81->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:null, cBuffer:11122714}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 1
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 2: org.lionsoul.ip2region.xdb.Searcher@305fd85d->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:null, cBuffer:11122714}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 2
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 3: org.lionsoul.ip2region.xdb.Searcher@458c1321->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:null, cBuffer:11122714}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 3
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 4: org.lionsoul.ip2region.xdb.Searcher@11438d26->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:null, cBuffer:11122714}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 4
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 5: org.lionsoul.ip2region.xdb.Searcher@4232c52b->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:null, cBuffer:11122714}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 5
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 6: org.lionsoul.ip2region.xdb.Searcher@1877ab81->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:null, cBuffer:11122714}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 6
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 7: org.lionsoul.ip2region.xdb.Searcher@305fd85d->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:null, cBuffer:11122714}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 7
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 8: org.lionsoul.ip2region.xdb.Searcher@458c1321->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:null, cBuffer:11122714}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 8
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 9: org.lionsoul.ip2region.xdb.Searcher@11438d26->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:null, cBuffer:11122714}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 9
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 10: org.lionsoul.ip2region.xdb.Searcher@4232c52b->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:null, cBuffer:11122714}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 10
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 11: org.lionsoul.ip2region.xdb.Searcher@1877ab81->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:null, cBuffer:11122714}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 11
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 12: org.lionsoul.ip2region.xdb.Searcher@305fd85d->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:null, cBuffer:11122714}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 12
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 13: org.lionsoul.ip2region.xdb.Searcher@458c1321->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:null, cBuffer:11122714}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 13
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 14: org.lionsoul.ip2region.xdb.Searcher@11438d26->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:null, cBuffer:11122714}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 14
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 15: org.lionsoul.ip2region.xdb.Searcher@4232c52b->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:null, cBuffer:11122714}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 15
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 16: org.lionsoul.ip2region.xdb.Searcher@1877ab81->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:null, cBuffer:11122714}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 16
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 17: org.lionsoul.ip2region.xdb.Searcher@305fd85d->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:null, cBuffer:11122714}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 17
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 18: org.lionsoul.ip2region.xdb.Searcher@458c1321->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:null, cBuffer:11122714}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 18
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 19: org.lionsoul.ip2region.xdb.Searcher@11438d26->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:null, cBuffer:11122714}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 19
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest v4 searcher pool closed gracefully
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 0: org.lionsoul.ip2region.xdb.Searcher@34cd072c->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 0
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 1: org.lionsoul.ip2region.xdb.Searcher@7a1ebcd8->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 1
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 2: org.lionsoul.ip2region.xdb.Searcher@5faeada1->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 2
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 3: org.lionsoul.ip2region.xdb.Searcher@528931cf->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 3
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 4: org.lionsoul.ip2region.xdb.Searcher@ea1a8d5->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 4
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 5: org.lionsoul.ip2region.xdb.Searcher@34cd072c->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 5
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 6: org.lionsoul.ip2region.xdb.Searcher@7a1ebcd8->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 6
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 7: org.lionsoul.ip2region.xdb.Searcher@5faeada1->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 7
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 8: org.lionsoul.ip2region.xdb.Searcher@528931cf->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 8
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 9: org.lionsoul.ip2region.xdb.Searcher@ea1a8d5->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 9
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 10: org.lionsoul.ip2region.xdb.Searcher@34cd072c->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 10
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 11: org.lionsoul.ip2region.xdb.Searcher@7a1ebcd8->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 11
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 12: org.lionsoul.ip2region.xdb.Searcher@5faeada1->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 12
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 13: org.lionsoul.ip2region.xdb.Searcher@528931cf->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 13
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 14: org.lionsoul.ip2region.xdb.Searcher@ea1a8d5->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 14
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 15: org.lionsoul.ip2region.xdb.Searcher@34cd072c->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 15
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 16: org.lionsoul.ip2region.xdb.Searcher@7a1ebcd8->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 16
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 17: org.lionsoul.ip2region.xdb.Searcher@5faeada1->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 17
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 18: org.lionsoul.ip2region.xdb.Searcher@528931cf->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 18
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest borrowed searcher 19: org.lionsoul.ip2region.xdb.Searcher@ea1a8d5->{version:IPv4, xdb:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb, vIndex:524288, cBuffer:null}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest search(58.250.36.41)=中国|广东省|深圳市|联通|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest return searcher 19
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.SearcherPoolTest v4 searcher pool closed gracefully
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in org.lionsoul.ip2region.service.SearcherPoolTest
+[INFO] Running org.lionsoul.ip2region.service.ConfigTest
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.ConfigTest builded config: {cache_policy:1,version:{Id:6, Name:IPv6, Bytes:16, IndexSize: 38},xdb_path:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v6.xdb,header:{Version:3,IndexPolicy:1,CreatedAt:1786685921,StartIndexPtr:9349599,EndIndexPtr:37277775,IPVersion:6,RuntimePtrBytes:4},v_index: {bytes: 524288},c_buffer: null, searchers:20}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.ConfigTest builded config: buffs.size=1, {cache_policy:2,version:{Id:4, Name:IPv4, Bytes:4, IndexSize: 14},xdb_path:null,header:{Version:3,IndexPolicy:1,CreatedAt:1793161301,StartIndexPtr:3367148,EndIndexPtr:11122700,IPVersion:4,RuntimePtrBytes:4},v_index: null, c_buffer: {bytes: 11122714},searchers:20}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.ConfigTest builded config: buffs.size=1, {cache_policy:2,version:{Id:6, Name:IPv6, Bytes:16, IndexSize: 38},xdb_path:null,header:{Version:3,IndexPolicy:1,CreatedAt:1786685921,StartIndexPtr:9349599,EndIndexPtr:37277775,IPVersion:6,RuntimePtrBytes:4},v_index: null, c_buffer: {bytes: 37277813},searchers:20}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.ConfigTest builded config: {cache_policy:2,version:{Id:6, Name:IPv6, Bytes:16, IndexSize: 38},xdb_path:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v6.xdb,header:{Version:3,IndexPolicy:1,CreatedAt:1786685921,StartIndexPtr:9349599,EndIndexPtr:37277775,IPVersion:6,RuntimePtrBytes:4},v_index: null, c_buffer: {bytes: 37277813},searchers:20}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.ConfigTest builded config: buffs.size=11, {cache_policy:2,version:{Id:4, Name:IPv4, Bytes:4, IndexSize: 14},xdb_path:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb,header:{Version:3,IndexPolicy:1,CreatedAt:1793161301,StartIndexPtr:3367148,EndIndexPtr:11122700,IPVersion:4,RuntimePtrBytes:4},v_index: null, c_buffer: {bytes: 11122714},searchers:20}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.ConfigTest builded config: buffs.size=9, {cache_policy:2,version:{Id:6, Name:IPv6, Bytes:16, IndexSize: 38},xdb_path:null,header:{Version:3,IndexPolicy:1,CreatedAt:1786685921,StartIndexPtr:9349599,EndIndexPtr:37277775,IPVersion:6,RuntimePtrBytes:4},v_index: null, c_buffer: {bytes: 37277813},searchers:20}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.ConfigTest builded config: {cache_policy:2,version:{Id:4, Name:IPv4, Bytes:4, IndexSize: 14},xdb_path:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb,header:{Version:3,IndexPolicy:1,CreatedAt:1793161301,StartIndexPtr:3367148,EndIndexPtr:11122700,IPVersion:4,RuntimePtrBytes:4},v_index: null, c_buffer: {bytes: 11122714},searchers:20}
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.ConfigTest builded config: {cache_policy:1,version:{Id:4, Name:IPv4, Bytes:4, IndexSize: 14},xdb_path:/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/test-classes/../../../../data/ip2region_v4.xdb,header:{Version:3,IndexPolicy:1,CreatedAt:1793161301,StartIndexPtr:3367148,EndIndexPtr:11122700,IPVersion:4,RuntimePtrBytes:4},v_index: {bytes: 524288},c_buffer: null, searchers:20}
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 s -- in org.lionsoul.ip2region.service.ConfigTest
+[INFO] Running org.lionsoul.ip2region.service.Ip2RegionTest
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.30)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:539f)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.31)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a0)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.32)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a1)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.33)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a2)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.34)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a3)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.35)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a4)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.36)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a5)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.37)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a6)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.38)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a7)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.39)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a8)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.40)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a9)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.41)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53aa)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.42)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53ab)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.43)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53ac)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.44)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53ad)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.45)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53ae)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.46)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53af)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.47)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b0)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.48)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b1)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.49)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b2)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.50)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b3)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.51)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b4)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.52)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b5)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.53)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b6)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.54)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b7)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.55)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b8)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.56)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b9)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.57)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53ba)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.58)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53bb)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.59)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53bc)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.60)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53bd)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.61)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53be)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.62)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53bf)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.63)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c0)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.64)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c1)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.65)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c2)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.66)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c3)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.67)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c4)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.68)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c5)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.69)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c6)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.70)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c7)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.71)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c8)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.72)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c9)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.73)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53ca)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.74)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53cb)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.75)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53cc)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.76)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53cd)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.77)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53ce)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.78)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53cf)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.79)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53d0)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest ip2region closed gracefully
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.30)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=null
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.31)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=null
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.32)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=null
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.33)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=null
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.34)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=null
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.35)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=null
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.36)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=null
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.37)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=null
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.38)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=null
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.39)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:539e)=null
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest ip2region closed gracefully
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.30)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:539f)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.31)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a0)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.32)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a1)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.33)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a2)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.34)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a3)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.35)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a4)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.36)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a5)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.37)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a6)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.38)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a7)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.39)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a8)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.40)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a9)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.41)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53aa)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.42)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53ab)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.43)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53ac)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.44)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53ad)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.45)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53ae)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.46)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53af)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.47)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b0)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.48)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b1)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.49)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b2)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.50)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b3)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.51)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b4)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.52)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b5)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.53)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b6)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.54)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b7)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.55)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b8)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.56)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b9)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.57)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53ba)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.58)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53bb)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.59)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53bc)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.60)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53bd)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.61)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53be)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.62)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53bf)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.63)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c0)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.64)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c1)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.65)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c2)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.66)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c3)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.67)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c4)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.68)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c5)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.69)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c6)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.70)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c7)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.71)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c8)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.72)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c9)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.73)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53ca)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.74)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53cb)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.75)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53cc)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.76)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53cd)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.77)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53ce)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.78)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53cf)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.79)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53d0)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest ip2region closed gracefully
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.30)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:539f)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.31)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a0)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.32)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a1)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.33)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a2)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.34)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a3)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.35)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a4)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.36)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a5)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.37)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a6)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.38)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a7)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.39)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a8)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.40)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53a9)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.41)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53aa)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.42)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53ab)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.43)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53ac)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.44)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53ad)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.45)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53ae)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.46)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53af)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.47)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b0)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.48)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b1)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.49)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b2)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.50)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b3)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.51)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b4)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.52)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b5)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.53)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b6)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.54)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b7)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.55)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b8)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.56)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53b9)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.57)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53ba)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.58)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53bb)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.59)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53bc)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.60)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53bd)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.61)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53be)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.62)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53bf)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.63)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c0)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.64)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c1)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.65)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c2)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.66)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c3)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.67)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c4)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.68)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c5)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.69)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c6)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.70)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c7)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.71)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c8)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.72)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53c9)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.73)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53ca)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.74)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53cb)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.75)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53cc)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.76)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53cd)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.77)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53ce)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.78)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53cf)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest search(113.92.157.79)=中国|广东省|深圳市|电信|CN, search(240e:3b7:3272:d8d0:db09:c067:8d59:53d0)=中国|广东省|深圳市|电信|CN
+2026-10-29 13:47:37 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest ip2region closed gracefully
+2026-10-29 13:47:40 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest 500000 searches finished in 2908ms, avg took: 5µs
+2026-10-29 13:47:40 DEBUG org.lionsoul.ip2region.service.Ip2RegionTest ip2region closed gracefully
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.949 s -- in org.lionsoul.ip2region.service.Ip2RegionTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ ip2region ---
+[INFO] Building jar: /Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/ip2region-3.3.7.jar
+[INFO] 
+[INFO] >>> source:2.1.2:jar (attach-sources) > generate-sources @ ip2region >>>
+[INFO] 
+[INFO] <<< source:2.1.2:jar (attach-sources) < generate-sources @ ip2region <<<
+[INFO] 
+[INFO] 
+[INFO] --- source:2.1.2:jar (attach-sources) @ ip2region ---
+[INFO] Building jar: /Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/ip2region-3.3.7-sources.jar
+[INFO] 
+[INFO] --- javadoc:2.9:jar (attach-javadocs) @ ip2region ---
+[WARNING] Javadoc Warnings
+[WARNING] 正在加载程序包org.lionsoul.ip2region.xdb的源文件...
+[WARNING] 正在加载程序包org.lionsoul.ip2region的源文件...
+[WARNING] 正在加载程序包org.lionsoul.ip2region.service的源文件...
+[WARNING] 正在构造 Javadoc 信息...
+[WARNING] 警告: 进行文档化的代码使用了模块，但在 http://docs.oracle.com/javase/7/docs/api/ 中定义的程序包在未命名模块中。
+[WARNING] 正在构建所有程序包和类的索引...
+[WARNING] 标准 Doclet 版本 23.0.2
+[WARNING] 正在构建所有程序包和类的树...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/service/Config.html...
+[WARNING] /Users/panzhuo/Documents/openclaw/ip2region/binding/java/src/main/java/org/lionsoul/ip2region/service/Config.java:17: 警告: 未知标记。@author 键入有误或为已注销的定制标记？
+[WARNING] * @Author Lion <chenxin619315@gmail.com>
+[WARNING] ^
+[WARNING] /Users/panzhuo/Documents/openclaw/ip2region/binding/java/src/main/java/org/lionsoul/ip2region/service/Config.java:18: 警告: 未知标记。已注销的定制标记？
+[WARNING] * @Date   2025/11/20
+[WARNING] ^
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/service/ConfigBuilder.html...
+[WARNING] /Users/panzhuo/Documents/openclaw/ip2region/binding/java/src/main/java/org/lionsoul/ip2region/service/ConfigBuilder.java:20: 警告: 未知标记。@author 键入有误或为已注销的定制标记？
+[WARNING] * @Author Lion <chenxin619315@gmail.com>
+[WARNING] ^
+[WARNING] /Users/panzhuo/Documents/openclaw/ip2region/binding/java/src/main/java/org/lionsoul/ip2region/service/ConfigBuilder.java:21: 警告: 未知标记。已注销的定制标记？
+[WARNING] * @Date   2025/11/20
+[WARNING] ^
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/Header.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/InetAddressException.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/service/InvalidConfigException.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/service/Ip2Region.html...
+[WARNING] /Users/panzhuo/Documents/openclaw/ip2region/binding/java/src/main/java/org/lionsoul/ip2region/service/Ip2Region.java:20: 警告: 未知标记。@author 键入有误或为已注销的定制标记？
+[WARNING] * @Author Lion <chenxin619315@gmail.com>
+[WARNING] ^
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/IPv4.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/IPv6.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/LittleEndian.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/Log.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/LongByteArray.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/LongByteArray.Position.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/Searcher.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/service/SearcherPool.html...
+[WARNING] /Users/panzhuo/Documents/openclaw/ip2region/binding/java/src/main/java/org/lionsoul/ip2region/service/SearcherPool.java:19: 警告: 无效输入：'<'
+[WARNING] * @author Leon<chenxin619315@gmail.com>
+[WARNING] ^
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/SearcherTest.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/Util.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/Version.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/XdbException.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/package-summary.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/package-tree.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/service/package-summary.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/service/package-tree.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/package-summary.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/package-tree.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/constant-values.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/serialized-form.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/class-use/LittleEndian.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/class-use/Log.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/class-use/InetAddressException.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/class-use/Version.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/class-use/IPv6.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/class-use/IPv4.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/class-use/Searcher.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/class-use/Header.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/class-use/Util.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/class-use/XdbException.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/class-use/LongByteArray.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/class-use/LongByteArray.Position.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/class-use/SearcherTest.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/service/class-use/ConfigBuilder.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/service/class-use/Config.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/service/class-use/Ip2Region.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/service/class-use/SearcherPool.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/service/class-use/InvalidConfigException.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/package-use.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/service/package-use.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/org/lionsoul/ip2region/xdb/package-use.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/overview-tree.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/index.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/allclasses-index.html...
+[WARNING] 正在构建所有类的索引...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/allpackages-index.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/index-all.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/search.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/overview-summary.html...
+[WARNING] 正在生成/Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/apidocs/help-doc.html...
+[WARNING] 生成的文档包含无效输入的诊断标记。
+[WARNING] 7 个警告
+[INFO] Building jar: /Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/ip2region-3.3.7-javadoc.jar
+[INFO] 
+[INFO] --- shade:1.4:shade (default) @ ip2region ---
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing /Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/ip2region-3.3.7.jar with /Users/panzhuo/Documents/openclaw/ip2region/binding/java/target/ip2region-3.3.7-shaded.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.251 s
+[INFO] Finished at: 2026-10-29T13:47:42+08:00
+[INFO] ------------------------------------------------------------------------
